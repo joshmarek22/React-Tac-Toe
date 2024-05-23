@@ -11,7 +11,7 @@ function Container() {
   return (
     <div id="game-container">
       {board.map((e,idx) => {
-        return (<Square key={idx} xTurn={{isXTurn, setIsXTurn}} />)
+        return (<Square key={idx} xTurn={{ isXTurn, setIsXTurn }} />)
       })}
     </div>
   )

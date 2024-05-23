@@ -1,9 +1,6 @@
 import {useState} from 'react';
 
-function Square({isXTurn, setIsXTurn}) {
-
-  // const [isXTurn, setIsXTurn] = useState(true)
-  // const [round, setRound] = useState(1)
+function Square({ xTurn: { isXTurn, setIsXTurn } }) {
 
   const boxClicked = (e) => {
     e.stopPropagation()
@@ -14,7 +11,7 @@ function Square({isXTurn, setIsXTurn}) {
         console.log("Checkpoint X")
       }else{
         e.target.innerHTML = "O"
-        console.log("Checkpoint O")
+        console.log("Checkpoint O") 
       }
       setIsXTurn(!isXTurn)
       // setRound(round + 1)
