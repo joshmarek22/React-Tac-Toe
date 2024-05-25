@@ -18,10 +18,13 @@ function Container() {
 },[round])
 
   return (
-    <div id="game-container">
-      {board.map((e,idx) => {
-        return (<Square key={idx} xTurn={{ isXTurn, setIsXTurn }} roundNum={{round, setRound}} updateBoard={{board, setBoard}} squareNum={idx}/>)
-      })}
+    <div className="game-body">
+      <h1>React-Tac-Toe</h1>
+      <div id="game-container">
+        {board.map((e,idx) => {
+          return (<Square key={idx} xTurn={{ isXTurn, setIsXTurn }} roundNum={{round, setRound}} updateBoard={{board, setBoard}} squareNum={idx}/>)
+        })}
+      </div>
     </div>
   )
 }
