@@ -1,26 +1,26 @@
-import {useState} from 'react';
 
-function Square({ xTurn: { isXTurn, setIsXTurn } }) {
+function Square({ xTurn: { isXTurn, setIsXTurn }, roundNum: {round, setRound}, squareNum, updateBoard: {board}}) {
+
+
 
   const boxClicked = (e) => {
     e.stopPropagation()
 
     if(!e.target.innerHTML){
       if(isXTurn == true){
-        e.target.innerHTML = "X"
-        console.log("Checkpoint X")
+        e.target.innerHTML = "X"     
       }else{
         e.target.innerHTML = "O"
-        console.log("Checkpoint O") 
       }
-      setIsXTurn(!isXTurn)
-      // setRound(round + 1)
       
+      setIsXTurn(!isXTurn)
+      board[squareNum] = e.target.innerHTML
+      setRound(round + 1)
     }
   }
 
   return (
-    <div onClick={(e) => boxClicked(e)} className="game-box"></div>
+    <div onClick={(e) => boxClicked(e)} className="game-box" id={squareNum}></div>
   )
 }
 
