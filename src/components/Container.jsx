@@ -15,6 +15,9 @@ function Container() {
     checkVertical(board)
     checkDiagonal(board)
     }
+    if(round >= 9){
+      alert("Game is a Scratch")
+    }
 },[round])
 
   return (

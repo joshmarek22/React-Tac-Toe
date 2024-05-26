@@ -4,7 +4,7 @@ const checkHorizontal = (board) => {
     let tmp = i*3
     if(board[tmp] === board[tmp+1] && board[tmp+1] === board[tmp+2]){
       if(board[tmp] !== null){
-        alert("win")
+        alert(`${board[tmp]} wins`)
       }
     }
     // 0, 1, 2
@@ -20,7 +20,7 @@ const checkVertical = (board) => {
     let tmp = i
     if(board[tmp] === board[tmp+3] && board[tmp+3] === board[tmp+6]){
       if(board[tmp] !== null){
-        alert("win")
+        alert(`${board[tmp]} wins`)
       }
     }
   }
@@ -29,12 +29,12 @@ const checkVertical = (board) => {
 const checkDiagonal = (board) => {
   if(board[0] === board[4] && board[4] === board[8]){
     if(board[0] !== null){
-      alert("win")
+      alert(`${board[0]} wins`)
     }
   }
   if(board[2] === board[4] && board[4] === board[6]){
     if(board[2] !== null){
-      alert("win")
+      alert(`${board[2]} wins`)
     }
   }
 }
