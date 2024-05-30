@@ -1,8 +1,6 @@
 
 function Square({ xTurn: { isXTurn, setIsXTurn }, roundNum: {round, setRound}, squareNum, updateBoard: {board}}) {
 
-
-
   const boxClicked = (e) => {
     e.stopPropagation()
 

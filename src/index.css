@@ -4,10 +4,17 @@
   box-sizing: border-box;
 }
 
+.title-header{
+  text-align: center;
+  padding-bottom: 40px;
+  font-size: 60px;
+}
+
 .game-body{
   text-align: center;
   padding: 10px 0;
-  
+  display: flex;
+  justify-content: center;
 }
 
 #game-container{
@@ -31,5 +38,17 @@
   background-color: hsl(0, 0%, 90%);
 }
 
+.scoreboard {
+  border: 1px solid black;
+  margin: 0px 30px;
+  padding: 5px;
+}
 
+.turnText {
+  font-size: 20px;
+}
+
+.turn-text-container{
+  padding-top: 20px;
+}
 

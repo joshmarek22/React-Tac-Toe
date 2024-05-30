@@ -24,6 +24,7 @@ const checkVertical = (board) => {
       }
     }
   }
+
 }
 
 const checkDiagonal = (board) => {
