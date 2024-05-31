@@ -1,20 +1,19 @@
 
 function Scoreboard({roundNum: {round, setRound}}) {
 
-  let turn = "X";
+  let turn
   console.log(`Round: ${round}`)
   if(round % 2 == 0){
-    turn = "X"
-
+    turn = "Player 1"
   }else{
-    turn = "O"
+    turn = "Player 2"
   }
 
   return (
     <div className="scoreboard">
       <h1><u>Scoreboard</u></h1>
       <div className="turn-text-container">
-      <span className="turnText">{turn} turn</span>
+        <span className="turnText">{turn} turn</span>
       </div>
     </div>
   );
